@@ -1,0 +1,663 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+
+
+.hideOverflow {
+    overflow: hidden;
+}
+
+
+a {
+    color: inherit; 
+    text-decoration: inherit; 
+    cursor: pointer;
+}
+
+
+.flexRow {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+};
+
+
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Button styles */
+
+
+.button {
+    padding: 10px;
+    background-color: rgb(245, 176, 48);
+    color: white;
+    border-radius: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+
+.button:hover {
+    color: white;
+    background-color: red;
+}
+
+
+/* Navigation styles */
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+    width: 100%;
+    color: white;
+    font-size: 1.2rem;
+    background: rgb(65, 62, 62);
+}
+
+
+.navigationItems{
+    display: flex;
+}
+
+
+.chickenzoid {
+    display: flex;
+    align-items: center;
+}
+
+
+.navigationItem {
+    margin-left: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.fa-hamburger{
+    font-size: 3rem;
+    padding: 20px;
+    border-radius: 70px;
+    background: rgb(236, 63, 63);
+}
+
+.navigationItem:hover {
+    color: rgb(236, 63, 63);
+}
+
+
+.navigationAddres{
+    background: rgb(236, 63, 63);
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    padding: 4px;
+    font-size: 1.3rem;
+}
+
+.name {
+    margin-left: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* Landing */
+
+
+.landingPageImage {
+    height: 100vh;
+    width: 100%;
+    background: url('./images/chicken_burger_background_large.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.restaurantInfo {
+    background:rgb(236, 63, 63);
+    color: white;
+    font-size: 1.5rem;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+
+.restaurantInfo div{
+    margin: 1rem 0;
+}
+
+
+/* Menu */
+
+
+.onlineMenu {
+    background-color: rgb(65, 62, 62);
+    padding: 2rem 0;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.menuItem {
+    padding: 10px;
+    width: 50%;
+    margin: 20px auto;
+    text-align: left;
+    background:rgb(245, 176, 48);
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.menuItem img {
+    width: 200px;
+    height: 159px;
+    margin-right: 1rem;
+}
+
+
+.menuItemDetails  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 145px;
+}
+
+
+.burgerName {
+    font-weight: bold;
+}
+
+
+/* Cover Layer */
+
+
+.coverContent {
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Menu Selection */
+
+
+.closeButton {
+    font-size: 2rem;
+    color: black;
+    text-align: right;
+    height: 0px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+
+.closeButton i:hover{
+    color: rgb(133, 133, 133);
+}
+
+
+.onlineMenuSelection {
+    width: 70%;
+    background: white;
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+
+.burgerInfo {
+    color: black;
+    padding: 20px;
+    display: flex;
+}
+
+
+.burgerInfo img{
+    width: 300px;
+    height: auto;
+}
+
+
+.burgerInfo .burgerName{
+    margin-bottom: 2rem;
+}
+
+
+.quantitySelection {
+    color: black;
+    padding: 10px 15px;
+    border-top: 1px solid black;
+    display: flex;
+}
+
+
+.changeQuantity{
+    cursor: pointer;
+    color: black;
+    font-size: 3rem;
+    width: 30%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.quantity {
+    margin: 0 1.5rem;
+    font-size: 1rem;
+}
+
+
+.minus i {
+    color: rgb(70, 69, 69);
+}
+
+
+.minus i:hover {
+    color: black; 
+}
+
+
+.add {
+    padding: 15px 45px;
+    border-radius: 5px;
+    background:red;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.quantitySelection .add {
+    width: 40%;
+}
+
+
+.add:hover {
+    background-color: rgb(156, 11, 11);
+}
+
+
+/* Basket */
+
+
+.basket {
+    display: flex;
+    flex-direction: column;
+    background:rgb(65, 62, 62);
+    width: 40%;
+    min-height: 100%;
+    right: 0;
+    color: white;
+    justify-content: space-between;
+}
+
+
+.basketHeader {
+    text-align: center;
+    background: rgb(236, 63, 63);
+    min-height: 80px;
+    padding: 10px;
+}
+
+
+.basketHeader .closeButton {
+    color: white;
+}
+
+.basketHeader div{
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+.basketItems {
+    flex-grow: 2;
+    align-self: flex-start;
+    overflow: visible;
+    width: 95%;
+    padding: 10px;
+}
+
+
+.basketItem {
+    display: flex;
+    padding: 10px;
+    width: 90%;
+    margin: 1rem auto;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+}
+
+
+.basketItem img {
+    width: 140px;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+
+.itemImage {
+    width: 40%;
+}
+
+
+.itemDetails {
+    width: 50%;
+}
+
+
+.itemHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.itemDescription {
+    font-size: 0.7rem;
+    text-align: left;
+}
+
+
+.itemPrice {
+    padding: 10px;
+    background: red;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    width: 30%;
+}
+
+
+.basketItem .quantitySelection {
+    display: flex;
+    border: none;
+    padding: 0;
+    width: fit-content;
+}
+
+
+.basketItem .changeQuantity{
+    display: flex;
+    font-size: 2rem;
+    
+}
+
+
+.basketItem .quantity {
+    margin: 0 0.5rem;
+}
+
+
+.emptyCart {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.items .flexRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.clearBasket {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.basketFooter {
+    background: rgb(236, 63, 63);
+    min-height: 60px;
+    text-align: center;
+}
+
+
+.basketFooter .button {
+    margin-top: 10px;
+    width: 90%;
+    display: inline-block;
+}
+
+
+.visible {
+    display: block;
+}
+
+
+/* Footer */
+
+
+.footer {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: black;
+}
+
+
+.footer div {
+    width: 33%;
+    text-align: center;
+}
+
+
+.footer i {
+    margin-right: 0.8rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1090px) {
+    .basketItem {
+        flex-direction: column;
+        padding: 0;
+    }
+
+
+    .basketItem * {
+        margin: 2px auto;
+    }
+
+
+    .itemImage, .itemDescription {
+        text-align: center;
+        width: 100%;
+    }
+
+
+    .itemHeader {
+        width: 50%;
+        text-align: center;
+    }
+
+
+    .itemDetails .changeQuantity {
+        justify-content: center;
+    }
+
+
+    .itemPrice{
+        width: 40%;
+        margin-bottom: 10px;
+    }
+
+
+    .basketItem img {
+        width: 200px;
+        height: auto;
+        margin: 0.5rem auto;
+    }
+
+} 
+
+
+@media screen and (max-width: 768px) { 
+
+
+    .navigation {
+        font-size: 0.7rem;
+    }
+
+
+    .navigation .name {
+        display: none;
+    }
+
+
+    .navigationAddres {
+        font-size: 1rem;
+    }
+
+
+    .fa-hamburger{
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 70px;
+        background: rgb(236, 63, 63);
+    }
+
+
+    .name {
+        margin-left: 0.2rem;
+    }
+    
+
+    .onlineMenu {
+        font-size: 1.2rem;
+    }
+
+
+    .onlineMenuSelection {
+        width: 100%;
+    }
+
+
+    .burgerInfo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .burgerInfo img{
+        width: 250px;
+        height: auto;
+        padding: 10px;
+    }
+
+
+    .burgerInfo .burgerName{
+        margin-bottom: 1rem;
+    }
+
+
+    .quantitySelection {
+        padding: 5px 10px;
+    }
+    
+    
+    .changeQuantity{
+        font-size: 3rem;
+        width: 40%;
+    }
+    
+    
+    .quantity {
+        margin: 0 0.8rem;
+        font-size: 1.2rem;
+    }
+    
+
+    .restaurantInfo {
+        font-size: 1rem;
+    }
+    
+
+    .basket {
+        width: 100%;
+    }
+    
+
+    .menuItem {
+        display: flex;
+        width: 80%;
+        margin: 20px auto;
+        text-align: left;
+    }
+
+
+    .menuItem img {
+        width: 170px;
+        height: 159px;
+        margin-right: 1rem;
+    }
+
+
+    .menuItemDetails {
+        justify-content: space-between;
+        font-size: 1rem;
+    }
+
+
+    .add {
+        padding: 15px 25px;
+    }
+   
+
+    .itemDetails {
+        width: 90%;
+        text-align: center;
+    }
+
+
+    .onlineItem * {
+        margin-left: 0.3rem;
+        margin-top: 20px;
+    }
+
+
+    .footer {
+        flex-direction: column;
+        font-size: 1rem;
+
+    }
+
+
+    .footer div{
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+
+}
+
+
+
+
